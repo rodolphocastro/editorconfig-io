@@ -1,3 +1,11 @@
 {
-  "recommendations": ["svelte.svelte-vscode"]
+  "recommendations": [
+    "svelte.svelte-vscode",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    "formulahendry.auto-rename-tag",
+    "EditorConfig.EditorConfig"    
+  ]
 }
