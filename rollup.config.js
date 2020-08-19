@@ -10,7 +10,7 @@ const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
 	let server;
-	
+
 	function toExit() {
 		if (server) server.kill(0);
 	}
@@ -39,14 +39,16 @@ export default {
 	},
 	plugins: [
 		svelte({
+			preprocess: sveltePreprocess({
+				postcss: true,
+			}),
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
 			// a separate file - better for performance
 			css: css => {
 				css.write('public/build/bundle.css');
-			},
-			preprocess: sveltePreprocess(),
+			}
 		}),
 
 		// If you have external dependencies installed from
